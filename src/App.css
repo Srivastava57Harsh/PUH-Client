@@ -1,17 +1,20 @@
-.app {
-  font-family: 'Arial', sans-serif;
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 1200px;
-  color: #333;
-}
+
 
 .header {
+  z-index: 999999;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
-  background: #fff;
+  padding: 20px 100px;
+  background: #ffffff;
+  box-shadow: 0px 1px 2px gray;
+}
+
+.app {
+  font-family: 'Arial', sans-serif;
+  margin: 0 100px;
+  color: #333;
+
 }
 
 .logo {
@@ -35,25 +38,46 @@
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+  gap: 40px;
 }
 
 .images-column {
   display: flex;
-  flex-direction: column;
   gap: 20px;
-  width: 30%;
+  width: 50%;
+
+}
+
+.carousel-one{
+  width: 45%;
+  margin-top: -40px;
+  z-index: -99;
+
+  .slick-list{
+    max-height: 600px;
+  }
+}
+
+.carousel-two {
+  width: 45%;
+  margin-top: -100px;
+  z-index: -99;
+
+  .slick-list{
+    max-height: 470px;
+  }
 }
 
 .images-column .slick-list {
-  max-height: 400px;
+
   border-radius: 10px;
   overflow: hidden;
 }
 
 .images-column img {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .content {
@@ -134,20 +158,24 @@
   outline: none;
 }
 
+
 .pillar-content {
   display: flex;
-  justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  white-space: nowrap;
 }
 
 .pillar-content div {
-  width: 30%;
+  display: inline-block;
+  min-width: 480px;
   text-align: left;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+
   transition: transform 0.2s ease;
 }
 
@@ -157,46 +185,21 @@
 
 .pillar-content img {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   margin-bottom: 10px;
 }
 
 .pillar-content h4 {
   font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: bold;
+  margin-bottom: -5px;
+  padding-left: 25px;
 }
 
 .pillar-content p {
+  padding-left: 25px;
   font-size: 14px;
   color: #666;
-}
 
-@media (max-width: 768px) {
-  .main {
-    flex-direction: column;
-  }
 
-  .images-column {
-    flex-direction: row;
-    overflow-x: auto;
-    width: 100%;
-  }
-
-  .content {
-    padding-left: 0;
-  }
-
-  .search-bar {
-    flex-direction: column;
-  }
-
-  .search-bar input {
-    width: 100%;
-  }
-
-  .pillar-content div {
-    width: 100%;
-  }
 }
