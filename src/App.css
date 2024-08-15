@@ -1,28 +1,36 @@
 
 
 .header {
-  z-index: 999999;
+  /* min-width: 100vw; */
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 100px;
   background: #ffffff;
   box-shadow: 0px 1px 2px gray;
+  overflow-x: hidden;
 }
 
 .app {
   font-family: 'Arial', sans-serif;
-  margin: 0 100px;
   color: #333;
-
+  overflow-x: hidden;
+ 
 }
 
 .logo {
+  display: flex;
   font-size: 24px;
   font-weight: bold;
 }
 
+.boundary {
+  margin-top:2px;
+}
+
 .nav ul {
+  /* padding-right: 50px; */
   list-style: none;
   display: flex;
   gap: 15px;
@@ -35,15 +43,15 @@
 }
 
 .main {
+  margin: 0 100px;
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
   gap: 40px;
 }
 
 .images-column {
   display: flex;
-  gap: 20px;
+  gap: 40px;
   width: 50%;
 
 }
@@ -81,8 +89,19 @@
 }
 
 .content {
-  width: 65%;
+  width: 50%;
   padding-left: 20px;
+}
+
+.herotext{
+  margin: 120px 0px 0px 0px;
+  height: 15%;
+}
+
+.content p {
+  font-size: 20px;
+  margin-bottom: 10px;
+
 }
 
 .content h1 {
@@ -95,13 +114,41 @@
   color: #ff4500;
 }
 
+
 .search-bar {
+
+  background-color: white;
   display: flex;
   gap: 10px;
   margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: #666;
+  margin-left: -200px
 }
 
+.search-bar input[type="text"] {
+  background-position: 10px center; /* Adjust the position accordingly */
+  background-repeat: no-repeat;
+  padding-left: 40px; /* Provide enough padding to not overlap the icon */
+}
+
+.search-bar input[placeholder="Condition, procedure, specialty..."] {
+  background-image: url('/public/search.svg');
+}
+
+.search-bar input[placeholder="City, state, or zipcode"] {
+  background-image: url('/public/location.svg');
+}
+
+.search-bar input[placeholder="Insurance carrier"] {
+  background-image: url('/public//insurance.svg');
+}
+
+
 .search-bar input {
+  background-color: #f9fafb;
   padding: 10px;
   flex-grow: 1;
   border: 1px solid #ccc;
@@ -109,19 +156,37 @@
 }
 
 .search-bar button {
-  padding: 10px 20px;
-  background: #ff4500;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
+  background-color: #ff4500; /* Match the color to the first image */
+  color: white;
   font-weight: bold;
+  border-radius: 5px; /* Assuming a more rounded corner from the first image */
+  font-size: 16px; /* Adjust font size if necessary */
 }
 
-.pillars {
-  text-align: center;
-  padding: 20px 0;
+
+.ribbon {
+  width: 100vw;
+  transform: rotate(-2deg);
+  z-index: 9999;
+  margin-top: -50px;
+  pointer-events: none; 
 }
+
+
+.pillars {
+  margin: 0 100px;
+  margin-top: 60px;
+  text-align: left;
+  padding: 20px 0;
+
+  .lifestyle{
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+}
+
+
 
 .pillars h2 {
   font-size: 28px;
@@ -137,14 +202,14 @@
 
 .pillar-tabs {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: 10px;
   margin-bottom: 20px;
 }
 
 .pillar-tabs button {
-  padding: 10px 20px;
-  background: #f0f0f0;
+  padding: 5px 15px;
+  background: #fff;
   border: 1px solid #ddd;
   border-radius: 20px;
   cursor: pointer;
@@ -153,7 +218,7 @@
 
 .pillar-tabs button:hover,
 .pillar-tabs button:focus {
-  background: #ff4500;
+  background: #000;
   color: #fff;
   outline: none;
 }

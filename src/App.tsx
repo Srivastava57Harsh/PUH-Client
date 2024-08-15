@@ -22,7 +22,6 @@ const App: React.FC = () => {
     rtl: true,
   };
 
-
   const carouselRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -37,33 +36,46 @@ const App: React.FC = () => {
   return (
     <>
       <header className="header">
-        <div className="logo">ProVital</div>
+        <div className="logo">
+          <img src="logo.svg" alt="logo" />
+          &nbsp;
+          {/* ProVital */}
+          <img src="title.svg" alt="title" />
+        </div>
         <nav className="nav">
           <ul>
             <li>
               <a href="#">List your practice</a>
             </li>
+            <img src="boundary.svg" alt="boundary" className="boundary" />
             <li>
               <a href="#">For Employers</a>
             </li>
+            <img src="boundary.svg" alt="boundary" className="boundary" />
             <li>
               <a href="#">Courses</a>
             </li>
+            <img src="boundary.svg" alt="boundary" className="boundary" />
             <li>
               <a href="#">Books</a>
             </li>
+            <img src="boundary.svg" alt="boundary" className="boundary" />
             <li>
               <a href="#">Speakers</a>
             </li>
+            <img src="boundary.svg" alt="boundary" className="boundary" />
             <li>
               <a href="#">Doctors</a>
             </li>
+            <img src="boundary.svg" alt="boundary" className="boundary" />
             <li>
               <a href="#">Login / Signup</a>
             </li>
+            <img src="dropdown.svg" alt="boundary" className="boundary" />
           </ul>
         </nav>
       </header>
+
       <div className="app">
         <main className="main">
           <div className="images-column">
@@ -90,9 +102,11 @@ const App: React.FC = () => {
           </div>
 
           <section className="content">
-            <h1>
-              Book an appointment with <span>lifestyle medicine</span> experts
-            </h1>
+            <img src="herotext.svg" alt="herotext" className="herotext" />
+            {/* <h1>
+              Book an appointment with <br />
+              <span>lifestyle medicine</span> experts
+            </h1> */}
             <p>Optimize your lifestyle and reverse chronic diseases.</p>
             <div className="search-bar">
               <input
@@ -106,9 +120,14 @@ const App: React.FC = () => {
           </section>
         </main>
 
+        <img src="ribbon.png" alt="ribbon" className="ribbon" />
+
         <section className="pillars">
-          <h2>How It Works</h2>
-          <h3>Lifestyle as medicine: The six pillars</h3>
+          {/* <h2>How It Works</h2> */}
+          <img src="howitworks.svg" className="how" />
+          <br />
+          <img src="lifestyle.svg" className="lifestyle" />
+          {/* <h3>Lifestyle as medicine: The six pillars</h3> */}
           <div className="pillar-tabs">
             <button>Nutrition</button>
             <button>Physical activity</button>
