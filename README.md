@@ -35,7 +35,9 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Demo:
+### Demo Link: [Deployed Link](https://puh-client.vercel.app/)
+
+### Demo Video:
 
 https://github.com/user-attachments/assets/28279f42-f1ca-4ca3-8c1e-ba9a29a6f4a5
 
