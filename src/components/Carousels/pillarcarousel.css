@@ -55,7 +55,15 @@
   
     .pillar-carousel p {
       max-width: 100%; 
+      font-size: 16px;
     }
+
+    .pillar-carousel img {
+        width: 130%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-bottom: 10px;
+      }
   }
   
   @media (max-width: 768px) {
@@ -65,7 +73,15 @@
   
     .pillar-carousel p {
       max-width: 100%; 
+      font-size: 16px;
     }
+
+    .pillar-carousel img {
+        width: 130%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-bottom: 10px;
+      }
   }
   
   @media (max-width: 480px) {
@@ -75,6 +91,14 @@
   
     .pillar-carousel p {
       max-width: 100%; 
+      font-size: 16px;
     }
+
+    .pillar-carousel img {
+        width: 130%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-bottom: 10px;
+      }
   }
   

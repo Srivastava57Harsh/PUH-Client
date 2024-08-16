@@ -8,14 +8,18 @@
 
 @media (max-width: 768px) {
   .ribbon {
+    width: 200vw;
     z-index: -1; 
     margin-top: -350px;
+
   }
 }
 
 @media (max-width: 480px) {
   .ribbon {
+    width: 200vw;
     z-index: -1; 
     margin-top: -350px;
+
   }
 }

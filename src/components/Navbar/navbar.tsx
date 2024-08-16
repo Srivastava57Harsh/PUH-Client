@@ -1,13 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./navbar.css";
+import MobileMenu from "../Menu/menu";
 import Dropdown from "../Dropdown/dropdown";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpenMain, setIsOpenMain] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const toggleDropdownMain = () => {
+    setIsOpenMain(!isOpenMain);
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -48,16 +66,22 @@ const Navbar: React.FC = () => {
             </li>
             <img
               src="dropdown.svg"
-              alt="boundary"
+              alt="dropdown"
               className="dropdown-arrow"
-              onClick={toggleDropdown}
+              onClick={toggleDropdownMain}
             />
           </ul>
         </nav>
 
-        <img src="hamburger.svg" alt="logo" className="hamburger" />
+        <img
+          src={isOpen ? "cross.svg" : "hamburger.svg"}
+          alt={isOpen ? "Close Menu" : "Open Menu"}
+          className="hamburger"
+          onClick={toggleDropdown}
+        />
       </header>
-      {isOpen && <Dropdown />}
+      {isOpenMain && <Dropdown />}
+      {isOpen && <MobileMenu closeMenu={toggleDropdown} />}
     </>
   );
 };

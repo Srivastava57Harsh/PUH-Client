@@ -39,7 +39,7 @@ const MobileCarousel: React.FC = () => {
       <img src="image7.svg" alt="Nutrition" />
       <img src="image8.svg" alt="Nutrition" />
 
-      {/* I AM DUPLICATING THE CONTENT FOR LOOP CONTINUATION  */}
+      {/* AM DUPLICATING THE CONTENT FOR LOOP CONTINUATION  */}
 
       <img src="image1.svg" alt="Nutrition" />
       <img src="image2.svg" alt="Nutrition" />

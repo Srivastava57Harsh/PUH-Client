@@ -1,0 +1,123 @@
+.mobile-menu {
+    align-content: center;
+    position: fixed;
+    width: 97%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    display: none; 
+  }
+  
+  .login-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+
+  }
+  
+  .login-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9fafb;
+  }
+  
+  .login-option span {
+    font-weight: 500;
+  }
+  
+  .login-option a {
+    margin-left: 15px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .menu-options {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-options li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+  }
+  
+  .menu-options li:last-child {
+    border-bottom: none;
+  }
+  
+  .menu-options li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .arrow {
+    font-size: 18px;
+    color: #007bff;
+  }
+  
+
+
+.mobile-menu .login-section,
+.mobile-menu .menu-options {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .mobile-menu {
+    display: flex; 
+    flex-direction: column;
+  }
+
+  .nav {
+    display: none; 
+  }
+
+  .hamburger {
+    display: block; 
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .mobile-menu {
+      display: flex; 
+      flex-direction: column;
+      width: 95vw;
+    }
+  
+    .nav {
+      display: none; 
+    }
+  
+    .hamburger {
+      display: block; 
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .mobile-menu {
+      display: flex; 
+      flex-direction: column;
+      width: 92vw;
+    }
+  
+    .nav {
+      display: none; 
+    }
+  
+    .hamburger {
+      display: block; 
+    }
+  }
