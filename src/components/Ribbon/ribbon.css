@@ -1,0 +1,7 @@
+.ribbon {
+    width: 100vw;
+    transform: rotate(-2deg);
+    z-index: 9999;
+    margin-top: -50px;
+    pointer-events: none; 
+  }

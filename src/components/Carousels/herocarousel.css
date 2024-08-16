@@ -1,0 +1,39 @@
+
+.images-column {
+    display: flex;
+    gap: 40px;
+    width: 50%;
+  
+  }
+  
+  .carousel-one{
+    width: 45%;
+    margin-top: -40px;
+    z-index: -99;
+  
+    .slick-list{
+      max-height: 600px;
+    }
+  }
+  
+  .carousel-two {
+    width: 45%;
+    margin-top: -100px;
+    z-index: -99;
+  
+    .slick-list{
+      max-height: 580px;
+    }
+  }
+  
+  .images-column .slick-list {
+  
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .images-column img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }

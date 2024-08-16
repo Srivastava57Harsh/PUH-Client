@@ -1,0 +1,46 @@
+
+.pillar-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    white-space: nowrap;
+  }
+  
+  .pillar-carousel div {
+    display: inline-block;
+    min-width: 480px;
+    text-align: left;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    transition: transform 0.2s ease;
+  }
+  
+  .pillar-carousel div:hover {
+    transform: translateY(-5px);
+  }
+  
+  .pillar-carousel img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .pillar-carousel h4 {
+    font-size: 18px;
+    margin-bottom: -5px;
+    padding-left: 25px;
+  }
+  
+  .pillar-carousel p {
+    padding-left: 25px;
+    font-size: 14px;
+    color: #666;
+  
+  
+  }
+  

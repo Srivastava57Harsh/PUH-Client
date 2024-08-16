@@ -1,0 +1,27 @@
+.lifestyle {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.pillar-tabs {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pillar-tabs button {
+  padding: 5px 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pillar-tabs button:hover,
+.pillar-tabs button:focus {
+  background: #000;
+  color: #fff;
+  outline: none;
+}

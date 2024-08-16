@@ -1,0 +1,42 @@
+.header {
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background: #ffffff;
+    box-shadow: 0px 1px 2px gray;
+    overflow-x: hidden;
+  }
+  
+.logo {
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.boundary {
+  margin-top: 2px;
+}
+
+.dropdown-arrow {
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.dropdown-container {
+  position: relative;
+}
+  
