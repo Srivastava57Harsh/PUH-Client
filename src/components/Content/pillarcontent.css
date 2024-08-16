@@ -1,27 +1,54 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+}
+
 .lifestyle {
-  margin-top: 10px;
-  margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.arrows {
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    justify-content: flex-end;
+    align-items: center; 
+    margin-left: auto; 
+}
+
+.arrow-image{
+    cursor: pointer;
 }
 
 .pillar-tabs {
-  display: flex;
-  justify-content: left;
-  gap: 10px;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .pillar-tabs button {
-  padding: 5px 15px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 14px;
+    padding: 5px 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
 .pillar-tabs button:hover,
 .pillar-tabs button:focus {
-  background: #000;
-  color: #fff;
-  outline: none;
+    background: #000;
+    color: #fff;
+    outline: none;
 }
+
+
+.pillar-tabs button.active-tab {
+    background: #000 !important;
+    color: #fff !important;
+  }

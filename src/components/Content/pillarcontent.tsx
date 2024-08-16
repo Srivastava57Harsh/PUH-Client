@@ -1,19 +1,58 @@
 import React, { useState } from "react";
 import "./pillarcontent.css";
 
-const PillarContent: React.FC = () => {
+const tabs = [
+  "Nutrition",
+  "Physical activity",
+  "Restorative sleep",
+  "Stress management",
+  "Social connection",
+  "Substance abuse",
+];
+
+const PillarContent: React.FC<{
+  activeTab: number;
+  setActiveTab: (index: number) => void;
+}> = ({ activeTab, setActiveTab }) => {
+  const handleLeftClick = () => {
+    setActiveTab(activeTab > 0 ? activeTab - 1 : tabs.length - 1);
+  };
+
+  const handleRightClick = () => {
+    setActiveTab(activeTab < tabs.length - 1 ? activeTab + 1 : 0);
+  };
+
   return (
     <>
-      <img src="howitworks.svg" className="how" />
+      <img src="howitworks.svg" className="how" alt="How it works" />
       <br />
-      <img src="lifestyle.svg" className="lifestyle" />
+      <div className="container">
+        <img src="lifestyle.svg" className="lifestyle" alt="Lifestyle" />
+        <div className="arrows">
+          <img
+            src="leftarrow.svg"
+            className="arrow-image"
+            alt="Left Arrow"
+            onClick={handleLeftClick}
+          />
+          <img
+            src="rightarrow.svg"
+            className="arrow-image"
+            alt="Right Arrow"
+            onClick={handleRightClick}
+          />
+        </div>
+      </div>
       <div className="pillar-tabs">
-        <button>Nutrition</button>
-        <button>Physical activity</button>
-        <button>Restorative sleep</button>
-        <button>Stress management</button>
-        <button>Social connection</button>
-        <button>Substance abuse</button>
+        {tabs.map((tab, index) => (
+          <button
+            key={index}
+            className={activeTab === index ? "active-tab" : ""}
+            onClick={() => setActiveTab(index)}
+          >
+            {tab}
+          </button>
+        ))}
       </div>
     </>
   );
