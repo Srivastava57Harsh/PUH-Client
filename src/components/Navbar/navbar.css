@@ -8,11 +8,18 @@
     box-shadow: 0 0 20px #ccc;
     overflow-x: hidden;
   }
+
+
   
 .logo {
   display: flex;
   font-size: 24px;
   font-weight: bold;
+}
+
+.hamburger{
+  display: none;
+  cursor: pointer;
 }
 
 .nav ul {
@@ -38,5 +45,71 @@
 
 .dropdown-container {
   position: relative;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: #ffffff;
+    box-shadow: 0 0 20px #ccc;
+    overflow-x: hidden;
+  }
+
+  .nav{
+    display: none;
+  }
+
+  .hamburger{
+    display: block;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header {
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: #ffffff;
+    box-shadow: 0 0 20px #ccc;
+    overflow-x: hidden;
+  }
+
+  .nav{
+    display: none;
+  }
+
+  .hamburger{
+    display: block;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .header {
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #ffffff;
+    box-shadow: 0 0 20px #ccc;
+    overflow-x: hidden;
+  }
+
+  .nav{
+    display: none;
+  }
+
+  .hamburger{
+    display: block;
+  }
+
 }
   

@@ -5,6 +5,7 @@ import Hero from "./components/Hero/hero";
 import Ribbon from "./components/Ribbon/ribbon";
 import Pillars from "./components/Pillars/pillars";
 import "./App.css";
+import MobileCarousel from "./components/Carousels/mobilecarousels";
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       <Hero />
       <SearchBar />
       <Ribbon />
+      <MobileCarousel />
       <Pillars />
     </div>
   );

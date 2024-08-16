@@ -2,53 +2,129 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%; 
-}
-
-.lifestyle {
+    width: 100%;
+  }
+  
+  .lifestyle {
     margin-top: 10px;
     margin-bottom: 20px;
-}
-
-
-.arrows {
+    max-width: 100%; 
+  }
+  
+  .howitworks {
+    text-align: left;
+    display: block;
+    max-width: 100%; 
+  }
+  
+  .arrows {
     display: flex;
     gap: 10px;
     height: 40px;
     justify-content: flex-end;
-    align-items: center; 
-    margin-left: auto; 
-}
-
-.arrow-image{
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .arrow-image {
     cursor: pointer;
-}
-
-.pillar-tabs {
+  }
+  
+  .pillar-tabs {
     display: flex;
     justify-content: left;
     gap: 10px;
     margin-bottom: 20px;
-}
-
-.pillar-tabs button {
+  }
+  
+  .pillar-tabs button {
     padding: 5px 15px;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 20px;
     cursor: pointer;
     font-size: 14px;
-}
-
-.pillar-tabs button:hover,
-.pillar-tabs button:focus {
+  }
+  
+  .pillar-tabs button:hover,
+  .pillar-tabs button:focus {
     background: #000;
     color: #fff;
     outline: none;
-}
-
-
-.pillar-tabs button.active-tab {
+  }
+  
+  .pillar-tabs button.active-tab {
     background: #000 !important;
     color: #fff !important;
   }
+  
+
+  @media (max-width: 1024px) {
+    .pillar-tabs {
+      display: none;
+    }
+  
+    .arrows {
+      display: none;
+    }
+  
+    .lifestyle, .howitworks {
+      max-width: 80%;
+      margin: 0 auto; 
+    }
+
+    .howitworks {
+        text-align: left;
+        display: block;
+        margin: 0 auto; 
+        max-width: 100%; 
+
+      }
+  }
+  
+  @media (max-width: 768px) {
+    .pillar-tabs {
+      display: none;
+    }
+  
+    .arrows {
+      display: none;
+    }
+  
+    .lifestyle, .howitworks {
+      max-width: 90%;
+      margin: 0 auto; 
+    }
+
+    .howitworks {
+        text-align: left;
+        display: block;
+        margin: 0 auto; 
+        max-width: 100%; 
+
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .pillar-tabs {
+      display: none;
+    }
+  
+    .arrows {
+      display: none;
+    }
+  
+    .lifestyle, .howitworks {
+      max-width: 100%; 
+      margin: 0 auto; 
+    }
+
+    .howitworks {
+        text-align: left;
+        display: block;
+        margin: 0 auto; 
+        max-width: 100%; 
+
+      }
+  }
+  

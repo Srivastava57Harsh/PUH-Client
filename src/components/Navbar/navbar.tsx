@@ -54,6 +54,8 @@ const Navbar: React.FC = () => {
             />
           </ul>
         </nav>
+
+        <img src="hamburger.svg" alt="logo" className="hamburger" />
       </header>
       {isOpen && <Dropdown />}
     </>

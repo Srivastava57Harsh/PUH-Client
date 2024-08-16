@@ -1,6 +1,27 @@
 .main {
-    margin: 0 100px;
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
+  margin: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+@media (max-width: 1024px) {
+  .main {
+    margin: 0px;
+    display: block;
   }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin: 0px;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    margin: 0px;
+    display: block;
+  }
+}

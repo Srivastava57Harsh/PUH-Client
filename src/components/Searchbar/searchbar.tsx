@@ -9,7 +9,6 @@ const SearchBar: React.FC = () => {
         <input type="text" placeholder="City, state, or zipcode" />
         <input type="text" placeholder="Insurance carrier" />
         <button>
-          {" "}
           <img src="searchwhite.svg" className="how" />
           Find now
         </button>

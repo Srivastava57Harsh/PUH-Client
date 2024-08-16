@@ -1,7 +1,21 @@
 .ribbon {
-    width: 100vw;
-    transform: rotate(-2deg);
-    z-index: 9999;
-    margin-top: -50px;
-    pointer-events: none; 
+  width: 100vw;
+  transform: rotate(-2deg);
+  z-index: 1;
+  margin-top: -50px;
+  pointer-events: none; 
+}
+
+@media (max-width: 768px) {
+  .ribbon {
+    z-index: -1; 
+    margin-top: -350px;
   }
+}
+
+@media (max-width: 480px) {
+  .ribbon {
+    z-index: -1; 
+    margin-top: -350px;
+  }
+}

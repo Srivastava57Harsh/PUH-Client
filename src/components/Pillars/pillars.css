@@ -17,3 +17,37 @@
   font-weight: normal;
   color: #666;
 }
+
+
+@media (max-width: 1024px) {
+    .pillars {
+        margin: 0 20px;
+        margin-top: 60px;
+        text-align: center;
+        padding: 20px 0;
+      
+      }
+  
+  }
+  
+  @media (max-width: 768px) {
+    .pillars {
+        margin: 0 20px;
+        margin-top: 60px;
+        text-align: center;
+        padding: 20px 0;
+      
+      }
+  
+  }
+  
+  @media (max-width: 480px) {
+    .pillars {
+        margin: 0 20px;
+        margin-top: 60px;
+        text-align: center;
+        padding: 20px 0;
+      
+      }
+  
+  }

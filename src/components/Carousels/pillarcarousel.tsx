@@ -3,6 +3,7 @@ import "./pillarcarousel.css";
 
 const PillarCarousel: React.FC<{ activeTab: number }> = ({ activeTab }) => {
   const carouselRef = useRef<HTMLDivElement>(null);
+  const scrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     if (carouselRef.current) {
@@ -10,6 +11,32 @@ const PillarCarousel: React.FC<{ activeTab: number }> = ({ activeTab }) => {
         activeTab * (carouselRef.current.scrollWidth / 6);
     }
   }, [activeTab]);
+
+  useEffect(() => {
+    const startAutoScroll = () => {
+      if (carouselRef.current) {
+        scrollIntervalRef.current = setInterval(() => {
+          carouselRef.current!.scrollLeft += carouselRef.current!.offsetWidth;
+          if (
+            carouselRef.current!.scrollLeft >=
+            carouselRef.current!.scrollWidth - carouselRef.current!.offsetWidth
+          ) {
+            carouselRef.current!.scrollLeft = 0;
+          }
+        }, 3000);
+      }
+    };
+
+    if (window.innerWidth <= 1024) {
+      startAutoScroll();
+    }
+
+    return () => {
+      if (scrollIntervalRef.current) {
+        clearInterval(scrollIntervalRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className="pillar-carousel" ref={carouselRef}>

@@ -24,7 +24,7 @@ const PillarContent: React.FC<{
 
   return (
     <>
-      <img src="howitworks.svg" className="how" alt="How it works" />
+      <img src="howitworks.svg" className="howitworks" alt="How it works" />
       <br />
       <div className="container">
         <img src="lifestyle.svg" className="lifestyle" alt="Lifestyle" />
